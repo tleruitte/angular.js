@@ -929,6 +929,8 @@ describe('ngRepeat animations', function() {
       '</div></div>'
     ))($rootScope);
 
+    $rootScope.$digest(); // init to undefined obj
+
     $rootScope.items = ['1','2','3'];
     $rootScope.$digest();
 
@@ -960,6 +962,8 @@ describe('ngRepeat animations', function() {
           '</div>' +
         '</div>'
       ))($rootScope);
+
+      $rootScope.$digest(); // init to undefined obj
 
       $rootScope.items = ['1','2','3'];
       $rootScope.$digest();
